@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Transformation Services – DGTECHINFO</title>
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .hero-service {
+      background: linear-gradient(to right, #0052cc, #0073e6);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem 2rem 2rem;
+      border-radius: 0 0 32px 32px;
+      margin-bottom: 2rem;
+    }
+    .hero-service h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .hero-service p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+    .cta-group {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .cta-button {
+      background: #00e676;
+      color: #002b5c;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 0.9rem 2.2rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: #0073e6;
+      color: #fff;
+    }
+    .features-section {
+      max-width: 900px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      background: #f8fbff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,82,204,0.08);
+      padding: 1.5rem 1.2rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: flex-start;
+      border: 2px solid #e3eafc;
+    }
+    .feature-card i {
+      font-size: 1.6rem;
+      color: #00c853;
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      color: #0052cc;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+    .benefits-list {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,82,204,0.08);
+      padding: 2rem 1.5rem;
+    }
+    .benefits-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+    }
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      font-size: 1.08rem;
+      color: #333;
+    }
+    .benefits-list i {
+      color: #00e676;
+      font-size: 1.3rem;
+      margin-top: 0.2rem;
+    }
+    .cta-section {
+      text-align: center;
+      margin: 3rem auto 2rem auto;
+    }
+    .cta-section h2 {
+      color: #0052cc;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .cta-section .cta-group {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .cta-section .cta-button {
+      background: #00e676;
+      color: #002b5c;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 0.9rem 2.2rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .cta-section .cta-button:hover {
+      background: #0073e6;
+      color: #fff;
+    }
+    .projects-section {
+      max-width: 900px;
+      margin: 3rem auto 2rem auto;
+      text-align: center;
+    }
+    .projects-section h2 {
+      color: #0052cc;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,82,204,0.08);
+      padding: 1.5rem 1.2rem;
+      text-align: left;
+      border: 2px solid #e3eafc;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: flex-start;
+    }
+    .project-card h3 {
+      color: #0052cc;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .project-metrics {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 0.7rem;
+      font-size: 0.98rem;
+      color: #0073e6;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-content">
+      <a href="index.html"><img src="Logo 4.png" alt="DGTECHINFO Logo" class="site-logo" style="height:110px;width:auto;max-width:220px;display:block;"></a>
+      <nav style="margin-left:auto;">
+        <ul style="display:flex;gap:1.5rem;align-items:center;list-style:none;margin:0;padding:0;">
+          <li><a href="index.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="services.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+          <li><a href="about.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-users"></i> About</a></li>
+          <li><a href="contact.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+
+      </nav>
+    </div>
+  </div>
+  <section class="hero-service">
+    <h1><i class="fa-solid fa-bolt"></i> Digital Transformation Services</h1>
+    <p>Accelerate your business growth with our end-to-end digital transformation solutions. We help you modernize processes, leverage data, and adopt new technologies for a future-ready enterprise.</p>
+    <div class="cta-group">
+      <a href="contact.html" class="cta-button">Start Your Project</a>
+      <a href="#benefits" class="cta-button" style="background:#0052cc;color:#fff;">See Benefits</a>
+    </div>
+  </section>
+  <h2 class="section-title">Our Digital Transformation Capabilities</h2>
+  <div class="features-section">
+    <div class="feature-card">
+      <i class="fa-solid fa-cloud-arrow-up"></i>
+      <strong>Cloud Migration</strong>
+      <span>Move your business to the cloud for agility, scalability, and cost savings.</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-brain"></i>
+      <strong>AI & Automation</strong>
+      <span>Leverage AI, ML, and RPA to automate processes and gain insights.</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-chart-line"></i>
+      <strong>Data Analytics</strong>
+      <span>Unlock the power of your data for smarter decision-making.</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-mobile-alt"></i>
+      <strong>Mobile & Web Modernization</strong>
+      <span>Upgrade legacy systems and deliver seamless digital experiences.</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-network-wired"></i>
+      <strong>System Integration</strong>
+      <span>Connect your tools, platforms, and teams for unified operations.</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <strong>Security & Compliance</strong>
+      <span>Protect your business with robust security and regulatory compliance.</span>
+    </div>
+  </div>
+  <div class="benefits-list" id="benefits">
+    <h2 class="section-title">Why Choose DGTECHINFO for Digital Transformation?</h2>
+    <ul>
+      <li><i class="fa-solid fa-check-circle"></i> Proven track record in delivering digital transformation for global clients</li>
+      <li><i class="fa-solid fa-check-circle"></i> End-to-end consulting, implementation, and support</li>
+      <li><i class="fa-solid fa-check-circle"></i> Industry-specific solutions tailored to your needs</li>
+      <li><i class="fa-solid fa-check-circle"></i> Agile, collaborative approach for faster results</li>
+      <li><i class="fa-solid fa-check-circle"></i> Focus on ROI, innovation, and business value</li>
+      <li><i class="fa-solid fa-check-circle"></i> 24/7 support and managed services</li>
+    </ul>
+  </div>
+  <section class="cta-section">
+    <h2>Ready to Transform Your Business?</h2>
+    <p>Contact us today to start your digital transformation journey with DGTECHINFO.</p>
+    <div class="cta-group">
+      <a href="contact.html" class="cta-button">Get Free Consultation</a>
+      <a href="services.html" class="cta-button" style="background:#0052cc;color:#fff;">Explore All Services</a>
+    </div>
+  </section>
+  <section class="projects-section" id="projects">
+    <h2 style="color:#0052cc;">Recent Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3><i class="fa-solid fa-bus"></i> Ride Sharing App</h3>
+        <span>Real-time ride booking, GPS tracking, and payment integration</span>
+        <div class="project-metrics">
+          <span><i class="fa-solid fa-mobile"></i> 30K+ downloads</span>
+          <span><i class="fa-solid fa-users"></i> 15K+ users</span>
+          <span><i class="fa-solid fa-star"></i> 4.8 rating</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3><i class="fa-solid fa-heart-pulse"></i> Health Tracker</h3>
+        <span>Personal health monitoring with wearable device integration</span>
+        <div class="project-metrics">
+          <span><i class="fa-solid fa-mobile"></i> 10K+ downloads</span>
+          <span><i class="fa-solid fa-users"></i> 7K+ users</span>
+          <span><i class="fa-solid fa-gauge-high"></i> 2.0s speed</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Learning App</h3>
+        <span>Interactive e-learning platform for students and professionals</span>
+        <div class="project-metrics">
+          <span><i class="fa-solid fa-mobile"></i> 20K+ downloads</span>
+          <span><i class="fa-solid fa-users"></i> 12K+ users</span>
+          <span><i class="fa-solid fa-arrow-down"></i> 18% bounce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer style="background:#002b5c;color:white;padding:2.5rem 0 1.5rem 0;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:2.5rem;">
+      <div style="min-width:220px;flex:1;">
+        <img src="Logo 4.png" alt="DGTECHINFO Logo" style="height:100px;width:auto;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.12));">
+        <div style="margin-bottom:1.2rem;">
+          <a href="#" style="color:white;margin:0 8px;"><i class="fa-brands fa-facebook fa-lg"></i></a>
+          <a href="#" style="color:white;margin:0 8px;"><i class="fa-brands fa-twitter fa-lg"></i></a>
+          <a href="#" style="color:white;margin:0 8px;"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          <a href="#" style="color:white;margin:0 8px;"><i class="fa-brands fa-github fa-lg"></i></a>
+        </div>
+        <div style="margin-bottom:1.2rem;">
+          &copy; 2025 DGTECHINFO. All rights reserved.
+        </div>
+      </div>
+      <div style="flex:2;min-width:260px;">
+        <h4 style="color:#fff;font-size:1.6rem;margin-bottom:1.5rem;text-align:center;font-weight:700;">Global Offices</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 3.5rem;justify-items:center;align-items:start;">
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+            <span style="color:#00e676;font-size:1.3rem;vertical-align:middle;"><i class="fa-solid fa-location-dot"></i></span>
+            <span style="font-weight:700;font-size:1.1rem;color:#fff;display:block;margin-top:0.3rem;">UK:</span>
+            <span style="color:#fff;">20-22 Wenlock Road<br>London, N1 7GU<br>United Kingdom</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+            <span style="color:#00e676;font-size:1.3rem;vertical-align:middle;"><i class="fa-solid fa-location-dot"></i></span>
+            <span style="font-weight:700;font-size:1.1rem;color:#fff;display:block;margin-top:0.3rem;">USA:</span>
+            <span style="color:#fff;">1234 Washington Ave<br>Chicago, IL 60646<br>USA</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+            <span style="color:#00e676;font-size:1.3rem;vertical-align:middle;"><i class="fa-solid fa-location-dot"></i></span>
+            <span style="font-weight:700;font-size:1.1rem;color:#fff;display:block;margin-top:0.3rem;">Canada:</span>
+            <span style="color:#fff;">3701 Lake Shore Blvd West<br>#48537, Toronto, ON M8W 4Y6<br>Canada</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+            <span style="color:#00e676;font-size:1.3rem;vertical-align:middle;"><i class="fa-solid fa-location-dot"></i></span>
+            <span style="font-weight:700;font-size:1.1rem;color:#fff;display:block;margin-top:0.3rem;">India:</span>
+            <span style="color:#fff;">Plot 40, Harihar Nagar<br>Umari Meghe. Nagpur MH<br>442001 India</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1;min-width:180px;">
+        <h4 style="color:#fff;font-size:1.2rem;margin-bottom:1rem;">Site Navigation</h4>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li><a href="index.html" style="color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="services.html" style="color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+          <li><a href="about.html" style="color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-users"></i> About</a></li>
+          <li><a href="contact.html" style="color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+        <a href="contact.html" class="cta-button" style="margin-top:1.5rem;width:100%;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:1.1rem;background:#00e676;color:#002b5c;">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
