@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Development – DGTECHINFO</title>
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .hero-service {
+      background: linear-gradient(to right, #0052cc, #0073e6);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem 2rem 2rem;
+      border-radius: 0 0 32px 32px;
+      margin-bottom: 2rem;
+    }
+    .hero-service h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .hero-service p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+    .hero-service .cta-group {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .hero-service .cta-button {
+      background: #fff;
+      color: #0052cc;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 0.9rem 2.2rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .hero-service .cta-button:hover {
+      background: #00e676;
+      color: #fff;
+    }
+    .features-section {
+      max-width: 900px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      background: #f8fbff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,82,204,0.08);
+      padding: 1.5rem 1.2rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: flex-start;
+      border: 2px solid #e3eafc;
+    }
+    .feature-card i {
+      font-size: 1.6rem;
+      color: #00c853;
+      margin-bottom: 0.5rem;
+    }
+    .tech-section {
+      max-width: 900px;
+      margin: 3rem auto 2rem auto;
+      text-align: center;
+    }
+    .tech-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+    .tech-icons i {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .tech-label {
+      font-size: 1rem;
+      color: #333;
+      margin-top: 0.2rem;
+    }
+    .projects-section {
+      max-width: 900px;
+      margin: 3rem auto 2rem auto;
+      text-align: center;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,82,204,0.08);
+      padding: 1.5rem 1.2rem;
+      text-align: left;
+      border: 2px solid #e3eafc;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: flex-start;
+    }
+    .project-card h3 {
+      color: #0052cc;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .project-metrics {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 0.7rem;
+      font-size: 0.98rem;
+      color: #0073e6;
+      font-weight: 600;
+    }
+    .cta-section {
+      text-align: center;
+      margin: 3rem auto 2rem auto;
+    }
+    .cta-section h2 {
+      color: #0052cc;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .cta-section .cta-group {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .cta-section .cta-button {
+      background: #00e676;
+      color: #002b5c;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 0.9rem 2.2rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .cta-section .cta-button:hover {
+      background: #0073e6;
+      color: #fff;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      z-index: 1000;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header a {
+      display: inline-block;
+      margin: 0 auto;
+    }
+    header .site-logo {
+      height: 60px;
+      width: auto;
+      transition: transform 0.3s;
+    }
+    header.scrolled .site-logo {
+      transform: scale(1.1);
+    }
+    footer {
+      background: #002b5c;
+      color: white;
+      padding: 2.5rem 0 1.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    footer .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2.5rem;
+    }
+    footer .footer-logo {
+      height: 80px;
+      width: auto;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12));
+    }
+    footer h4 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    footer ul li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    footer ul li i {
+      color: #00e676;
+      min-width: 20px;
+      text-align: center;
+    }
+    footer .social-icons {
+      margin-top: 1rem;
+    }
+    footer .social-icons a {
+      color: white;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+    footer .social-icons a:hover {
+      color: #00e676;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-content">
+      <a href="index.html"><img src="Logo 4.png" alt="DGTECHINFO Logo" class="site-logo" style="height:110px;width:auto;max-width:220px;display:block;"></a>
+      <nav style="margin-left:auto;">
+        <ul style="display:flex;gap:1.5rem;align-items:center;list-style:none;margin:0;padding:0;">
+          <li><a href="index.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="services.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+          <li><a href="about.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-users"></i> About</a></li>
+          <li><a href="contact.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+
+      </nav>
+    </div>
+  </div>
+  <section class="hero-service">
+    <h1><i class="fa-solid fa-code"></i> Professional Website Development</h1>
+    <p>Create stunning, high-performance websites that drive results. From simple landing pages to complex web applications, we build digital experiences that engage your audience and grow your business.</p>
+    <div class="cta-group">
+      <a href="contact.html" class="cta-button">Start Your Project</a>
+      <a href="#projects" class="cta-button" style="background:#0052cc;color:#fff;">View Portfolio</a>
+    </div>
+  </section>
+  <section class="features-section">
+    <div class="feature-card">
+      <i class="fa-solid fa-mobile-alt"></i>
+      <strong>Responsive Design</strong>
+      <span>Websites that work perfectly on all devices and screen sizes</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-search"></i>
+      <strong>SEO Optimization</strong>
+      <span>Built-in SEO best practices to improve your search rankings</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-gauge-high"></i>
+      <strong>Fast Performance</strong>
+      <span>Optimized for speed with loading times under 3 seconds</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <strong>Security First</strong>
+      <span>Advanced security measures to protect your website and data</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-brands fa-wordpress"></i>
+      <strong>CMS Integration</strong>
+      <span>Easy content management with popular platforms like WordPress</span>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-paint-brush"></i>
+      <strong>Custom Design</strong>
+      <span>Unique designs tailored to your brand and business needs</span>
+    </div>
+  </section>
+  <section class="tech-section">
+    <h2 style="color:#0052cc;">Technologies We Use</h2>
+    <div class="tech-icons">
+      <div><i class="fa-brands fa-react"></i><div class="tech-label">React</div></div>
+      <div><i class="fa-brands fa-js"></i><div class="tech-label">Next.js</div></div>
+      <div><i class="fa-brands fa-angular"></i><div class="tech-label">Angular</div></div>
+      <div><i class="fa-brands fa-vuejs"></i><div class="tech-label">Vue.js</div></div>
+      <div><i class="fa-brands fa-wordpress"></i><div class="tech-label">WordPress</div></div>
+      <div><i class="fa-brands fa-shopify"></i><div class="tech-label">Shopify</div></div>
+      <div><i class="fa-brands fa-node-js"></i><div class="tech-label">Node.js</div></div>
+      <div><i class="fa-brands fa-php"></i><div class="tech-label">PHP</div></div>
+      <div><i class="fa-brands fa-laravel"></i><div class="tech-label">Laravel</div></div>
+      <div><i class="fa-brands fa-python"></i><div class="tech-label">Python</div></div>
+      <div><i class="fa-brands fa-aws"></i><div class="tech-label">AWS</div></div>
+      <div><i class="fa-brands fa-docker"></i><div class="tech-label">Docker</div></div>
+    </div>
+  </section>
+  <section class="projects-section" id="projects">
+    <h2 style="color:#0052cc;">Recent Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3><i class="fa-solid fa-cart-shopping"></i> E-commerce Platform</h3>
+        <span>Full-featured online store with payment integration and inventory management</span>
+        <div class="project-metrics">
+          <span><i class="fa-solid fa-file-lines"></i> 50+ pages</span>
+          <span><i class="fa-solid fa-users"></i> 10K+ users</span>
+          <span><i class="fa-solid fa-arrow-trend-up"></i> 4.2% conversion</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3><i class="fa-solid fa-building"></i> Corporate Website</h3>
+        <span>Professional business website with blog and contact management</span>
+        <div class="project-metrics">
+          <span><i class="fa-solid fa-file-lines"></i> 25+ pages</span>
+          <span><i class="fa-solid fa-users"></i> 5K+ users</span>
+          <span><i class="fa-solid fa-gauge-high"></i> 2.1s speed</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3><i class="fa-solid fa-image"></i> Portfolio Website</h3>
+        <span>Creative portfolio showcase with interactive galleries</span>
+        <div class="project-metrics">
+          <span><i class="fa-solid fa-file-lines"></i> 15+ pages</span>
+          <span><i class="fa-solid fa-users"></i> 2K+ users</span>
+          <span><i class="fa-solid fa-arrow-down"></i> 25% bounce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-section">
+    <h2>Ready to Build Your Website?</h2>
+    <p>Let's create a website that represents your brand perfectly and drives real business results.</p>
+    <div class="cta-group">
+      <a href="contact.html" class="cta-button">Get Free Quote</a>
+      <a href="contact.html" class="cta-button" style="background:#0052cc;color:#fff;">Schedule Consultation</a>
+    </div>
+  </section>
+  <footer style="background:#002b5c;color:white;padding:2.5rem 0 1.5rem 0;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:2.5rem;">
+      <div style="min-width:220px;flex:1;">
+        <img src="Logo 4.png" alt="DGTECHINFO Logo" style="height:100px;width:auto;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.12));">
+        <div style="margin-bottom:1.2rem;">
+          <a href="#" style="color:white;margin:0 8px;"><i class="fa-brands fa-facebook fa-lg"></i></a>
+          <a href="#" style="color:white;margin:0 8px;"><i class="fa-brands fa-twitter fa-lg"></i></a>
+          <a href="#" style="color:white;margin:0 8px;"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          <a href="#" style="color:white;margin:0 8px;"><i class="fa-brands fa-github fa-lg"></i></a>
+        </div>
+        <div style="margin-bottom:1.2rem;">
+          &copy; 2025 DGTECHINFO. All rights reserved.
+        </div>
+      </div>
+      <div style="flex:2;min-width:260px;">
+        <h4 style="color:#fff;font-size:1.6rem;margin-bottom:1.5rem;text-align:center;font-weight:700;">Global Offices</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 3.5rem;justify-items:center;align-items:start;">
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+            <span style="color:#00e676;font-size:1.3rem;vertical-align:middle;"><i class="fa-solid fa-location-dot"></i></span>
+            <span style="font-weight:700;font-size:1.1rem;color:#fff;display:block;margin-top:0.3rem;">UK:</span>
+            <span style="color:#fff;">20-22 Wenlock Road<br>London, N1 7GU<br>United Kingdom</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+            <span style="color:#00e676;font-size:1.3rem;vertical-align:middle;"><i class="fa-solid fa-location-dot"></i></span>
+            <span style="font-weight:700;font-size:1.1rem;color:#fff;display:block;margin-top:0.3rem;">USA:</span>
+            <span style="color:#fff;">1234 Washington Ave<br>Chicago, IL 60646<br>USA</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+            <span style="color:#00e676;font-size:1.3rem;vertical-align:middle;"><i class="fa-solid fa-location-dot"></i></span>
+            <span style="font-weight:700;font-size:1.1rem;color:#fff;display:block;margin-top:0.3rem;">Canada:</span>
+            <span style="color:#fff;">3701 Lake Shore Blvd West<br>#48537, Toronto, ON M8W 4Y6<br>Canada</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+            <span style="color:#00e676;font-size:1.3rem;vertical-align:middle;"><i class="fa-solid fa-location-dot"></i></span>
+            <span style="font-weight:700;font-size:1.1rem;color:#fff;display:block;margin-top:0.3rem;">India:</span>
+            <span style="color:#fff;">Plot 40, Harihar Nagar<br>Umari Meghe. Nagpur MH<br>442001 India</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1;min-width:180px;">
+        <h4 style="color:#fff;font-size:1.2rem;margin-bottom:1rem;">Site Navigation</h4>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li><a href="index.html" style="color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="services.html" style="color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+          <li><a href="about.html" style="color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-users"></i> About</a></li>
+          <li><a href="contact.html" style="color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+        <a href="contact.html" class="cta-button" style="margin-top:1.5rem;width:100%;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:1.1rem;background:#00e676;color:#002b5c;">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      header.classList.toggle('scrolled', window.scrollY > 0);
+    });
+  </script>
+</body>
+</html>
