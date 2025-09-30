@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automation Services</title>
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+    }
+    .dropbtn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      user-select: none;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #fff;
+      min-width: 210px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      z-index: 1001;
+      right: 0;
+      top: 110%;
+      border-radius: 8px;
+      padding: 0.5rem 0;
+    }
+    .dropdown-content li {
+      width: 100%;
+    }
+    .dropdown-content a {
+      color: #002b5c;
+      padding: 0.7rem 1.2rem;
+      text-decoration: none;
+      display: block;
+      font-size: 1rem;
+      border-radius: 0;
+      background: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .dropdown-content a:hover {
+      background: #f0f8ff;
+      color: #0073e6;
+    }
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth; /* smooth scrolling */
+    }
+
+    /* Navbar container */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8f8f8;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-buttons a {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      background-color: #007bff;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #0056b3;
+    }
+
+  
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    #home { background: #f0f8ff; }
+    #services { background: #e8f5e9; }
+    #about { background: #fff3e0; }
+    #contact { background: #fce4ec; }
+
+    /* Projects section styles */
+    .projects-section {
+      max-width: 900px;
+      margin: 3rem auto 2rem auto;
+      text-align: center;
+    }
+    .projects-section h2 {
+      color: #0052cc;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,82,204,0.08);
+      padding: 1.5rem 1.2rem;
+      text-align: left;
+      border: 2px solid #e3eafc;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: flex-start;
+    }
+    .project-card h3 {
+      color: #0052cc;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .project-metrics {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 0.7rem;
+      font-size: 0.98rem;
+      color: #0073e6;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-content">
+      <a href="index.html"><img src="Logo 4.png" alt="DGTECHINFO Logo" class="site-logo" style="height:110px;width:auto;max-width:220px;display:block;"></a>
+      <nav style="margin-left:auto; position: relative;">
+        <ul style="display:flex;gap:1.5rem;align-items:center;list-style:none;margin:0;padding:0;">
+          <li><a href="index.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;cursor:pointer;" tabindex="0" onclick="event.preventDefault();"><i class="fa-solid fa-briefcase"></i> Services <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="dropdown-content">
+              <li><a href="website-development.html">Website Development</a></li>
+              <li><a href="mobile-app-development.html">Mobile App Development</a></li>
+              <li><a href="cloud-ai.html">Cloud & AI</a></li>
+              <li><a href="automation.html">Automation</a></li>
+              <li><a href="digital-transformation.html">Digital Transformation</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-users"></i> About Us</a></li>
+          <li><a href="contact.html" style="color:#002b5c;text-decoration:none;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Sections -->
+  <section id="home">
+    <h1>Welcome to Automation Services</h1>
+    <p>Streamline your business with intelligent automation.</p>
+  </section>
+
+  <section id="services">
+    <h1>Our Services</h1>
+    <p>We design and implement solutions that boost productivity and reduce costs.</p>
+  </section>
+
+  <section id="about">
+    <h1></h1>
+    <p>We are experts in automation and digital transformation.</p>
+  </section>
+
+  <section id="contact">
+    <h1>9911470747</h1>
+    <p>Email us at: info@DGTECHINFO.com</p>
+  </section>
+
+  <!-- Recent Projects Section -->
+  <section class="projects-section" id="projects">
+    <h2 style="color:#0052cc;">Recent Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3><i class="fa-solid fa-bus"></i> Ride Sharing App</h3>
+        <span>Real-time ride booking, GPS tracking, and payment integration</span>
+        <div class="project-metrics">
+          <span><i class="fa-solid fa-mobile"></i> 30K+ downloads</span>
+          <span><i class="fa-solid fa-users"></i> 15K+ users</span>
+          <span><i class="fa-solid fa-star"></i> 4.8 rating</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3><i class="fa-solid fa-heart-pulse"></i> Health Tracker</h3>
+        <span>Personal health monitoring with wearable device integration</span>
+        <div class="project-metrics">
+          <span><i class="fa-solid fa-mobile"></i> 10K+ downloads</span>
+          <span><i class="fa-solid fa-users"></i> 7K+ users</span>
+          <span><i class="fa-solid fa-gauge-high"></i> 2.0s speed</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Learning App</h3>
+        <span>Interactive e-learning platform for students and professionals</span>
+        <div class="project-metrics">
+          <span><i class="fa-solid fa-mobile"></i> 20K+ downloads</span>
+          <span><i class="fa-solid fa-users"></i> 12K+ users</span>
+          <span><i class="fa-solid fa-arrow-down"></i> 18% bounce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Fallback for touch devices and click
+    document.addEventListener('DOMContentLoaded', function() {
+      var dropdown = document.querySelector('.dropdown');
+      var dropbtn = document.querySelector('.dropbtn');
+      if(dropbtn && dropdown) {
+        dropbtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var menu = dropdown.querySelector('.dropdown-content');
+          if(menu.style.display === 'block') {
+            menu.style.display = 'none';
+          } else {
+            menu.style.display = 'block';
+          }
+        });
+        // Hide dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!dropdown.contains(e.target)) {
+            var menu = dropdown.querySelector('.dropdown-content');
+            if(menu) menu.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
